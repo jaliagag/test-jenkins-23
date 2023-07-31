@@ -4,7 +4,14 @@ pipeline {
 		stage('check') {
 		    steps{
 				echo 'Hello world'
-				echo 'this be from github yo'
+				sh '''
+					echo "multiline sheit"
+					pwd
+					ls -la
+					cat app.py
+					python3 --version
+					python3 app.py
+				'''
 	    	}
 	  	}
 		stage('build') {
