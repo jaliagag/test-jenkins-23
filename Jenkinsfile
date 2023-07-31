@@ -11,6 +11,7 @@ pipeline {
 					cat app.py
 					python3 --version
 					python3 app.py
+					whoami
 				'''
 	    	}
 	  	}
