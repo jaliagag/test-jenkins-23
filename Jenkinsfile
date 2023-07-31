@@ -12,6 +12,7 @@ pipeline {
 					python3 --version
 					python3 app.py
 					whoami
+					docker ps
 				'''
 	    	}
 	  	}
