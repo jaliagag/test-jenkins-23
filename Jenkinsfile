@@ -3,22 +3,17 @@ pipeline {
 	stages {
 		stage('check') {
 		    steps{
-				echo 'Hello world'
 				sh '''
-					echo "multiline sheit"
 					pwd
 					ls -la
-					cat app.py
 					python3 --version
-					python3 app.py
-					whoami
-					docker ps
 				'''
 	    	}
 	  	}
 		stage('build') {
 	    	steps {
 				echo 'Building...'
+				sh 'docker build -t test_build:1 .'
 	    	}
 	  	}
 
