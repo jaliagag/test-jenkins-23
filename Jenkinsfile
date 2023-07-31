@@ -20,12 +20,13 @@ pipeline {
 	 	stage('test') {
 	    	steps {
 				echo 'Testing...'
+				sh 'docker run test_build:1'
 	    	}
 	  	}
 
 	  	stage('deploy') {
 	    	steps {
-				echo 'Deploying'
+				echo 'Deploying...'
 				echo 'Done!'
 	    	}
 	  	}
